@@ -1,0 +1,133 @@
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: inherit; }
+
+* {
+    XXXXborder: 2px solid red;
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 90rem) 1fr;
+    grid-template-rows: 3.5rem 3.5rem 1fr 3.5rem;
+    grid-template-areas: 
+    "header-1 header-1 header-1" 
+    "header-2 header-2 header-2" 
+    ". main ."
+    "footer footer footer"
+    }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.header-1 {
+    grid-area: header-1;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: black;
+    margin: 0;
+    height: 3.5rem;
+}
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header-2 {
+    grid-area: header-2;
+    top: 0; left: 0;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: black;
+    margin: 0;
+}
+nav.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigation ul li {
+    margin: 0rem 2rem;
+    list-style-type: none;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 90rem) 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "top-section top-section top-section" 
+    ". middle-section ." 
+    ". end-section ."
+   }
+.top-section {
+    grid-area: top-section;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://nourisheveryday.com/wp-content/uploads/2016/01/Veggie-Green-Smoothie-Bowl-2.jpg);
+    background-size: cover;
+    height: 20rem;
+}
+.AH-title {
+    color: blue;
+    font-size: 4rem;
+}
+.middle-section {
+    background-color: blue;
+    grid-area: middle-section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+}
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+}
+.recipe-item {
+      background-color: lightslategray;
+      min-height: 17.5vw;
+}
+.section-title {
+    font-size: 2rem;
+    color: seagreen;
+    margin: 1rem;
+}
+.end-section {
+    background-color: orange;
+    grid-area: end-section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: lightgrey;
+    
+}
+
